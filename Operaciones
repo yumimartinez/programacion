@@ -1,0 +1,39 @@
+// Este codigo ha sido generado por el modulo psexport 20140901-w32 de PSeInt
+// dado que dicho modulo se encuentra aun en desarrollo y en etapa experimental
+// puede que el codigo generado no sea completamente correcto. Si encuentra
+// errores por favor reportelos en el foro (http://pseint.sourceforge.net).
+
+#include<iostream>
+using namespace std;
+
+// Para leer variables de texto se utiliza el operador << del objeto cin, que
+// lee solo una palabra. Para leer una linea completa (es decir, incluyendo los
+// espacios en blanco) se debe utilzar getline (ej, reemplazar cin>>x por
+// getline(cin,x)), pero obliga a agregar un cin.ignore() si antes del getline
+// se leyó otra variable con >>.
+
+int main() {
+	float a;
+	float b;
+	float c;
+	float d;
+	float e;
+	float f;
+	float g;
+	cout << "Ingrese el primer numero:" << endl;
+	cin >> a;
+	cout << "Ingrese el segundo numero:" << endl;
+	cin >> b;
+	c = a+b;
+	d = a-b;
+	e = a*b;
+	f = a/b;
+	g = a%b;
+	cout << "El resultado es: " << c << endl;
+	cout << "El resultado es: " << d << endl;
+	cout << "El resultado es: " << e << endl;
+	cout << "El resultado es: " << f << endl;
+	cout << "El resultado es: " << g << endl;
+	return 0;
+}
+
