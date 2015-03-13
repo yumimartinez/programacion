@@ -1,0 +1,19 @@
+#include"stdafx.h"
+#include<iostream>
+#include"conio.h"
+
+using namespace std;
+
+int main() {
+	float a;
+	int numero;
+	cout << ("Ingrese el número: ");
+	cin >> a;
+	if (a<0) {
+		a = -a;
+	}
+	cout << ("El valor absoluto es: ");
+	cout << a << endl;
+	getch ();
+	return 0;
+}
