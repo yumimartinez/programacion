@@ -1,0 +1,26 @@
+// practica1a.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main(){
+	int n,i=1,d=0;
+	cout << "Ingrese el numero: ";
+	cin >> n;
+	for (i=1; i<=n; i++){
+		if (n%i==0){
+			d++;
+		}
+	}
+	if (d==2){
+		cout << "El numero es primo" << endl;
+	} else
+		cout << "El numero no es primo" << endl;
+
+	getch ();
+	return 0;
+}
