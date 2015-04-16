@@ -1,0 +1,33 @@
+// Practica1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main() {
+		int n,i=0,a,mayor=1,menor=10000;
+		float promedio,k;
+	cout << "Ingrese la cantidad de numero que desea usar: ";
+	cin >> n;
+	k=0;
+	for (i=1; i<=n; i++){
+		cout << "Ingrese el numero: ";
+		cin >> a;
+		k=k+a;
+		if (mayor<a){
+			mayor=a;
+		}
+		if (menor>a){
+			menor=a;
+		}
+	}
+	promedio=(k/n);
+	cout << "EL numero mayor es: " << mayor << endl;
+	cout << "El numero menor es: " << menor << endl;
+	cout << "El promedio de " << n << " numero es " << promedio << endl; 
+	getch();
+	return 0;
+}
