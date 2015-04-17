@@ -1,0 +1,35 @@
+// notafinalwhile.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main(){
+	int n,i,a,b,c,p,np,ef,nf,id;
+	cout << "Ingrese el ID del alumno: ";
+	cin >> id;
+	while (id!=-999){
+		cout << "Ingrese la nota del primer pacial: ";
+		cin >> a;
+		cout << "Ingrese la nota del segundo parcial: ";
+		cin >> b; 
+		cout << "Ingrese la nota del tercer parcial: ";
+		cin >> c;
+		cout << "Igrese la nota practica: ";
+		cin >> np;
+		cout << "Ingrese la nota del examen final: ";
+		cin >> ef;
+		p=((a+b+c)/3);
+		nf=p*0.4+np*0.2+ef*0.4;
+		cout << "La nota final es: " << nf << endl;
+		cout << endl;
+		cout << "Ingrese el id: ";
+		cin >> id;
+		cout << endl;
+	}
+	getch ();
+	return 0;
+}
