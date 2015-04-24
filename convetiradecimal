@@ -1,0 +1,30 @@
+// numdivisible.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main(){
+	int r,s,i,num,d,p;
+	s=0;
+	i=0;
+	cout << "Ingrese el numero: ";
+	cin >> num;
+	cout << "Ingrese la base: " ;
+	cin >> r;
+	do {
+		while (num>0){
+			d=num%10;
+			num=num/10;
+			p=powf(r,i);
+			i++;
+			s=s+d*p;
+			}
+		cout << "El numero en base decimal es: " << s << endl;
+		} while(r>0 && r<10);
+
+	getch ();
+	return 0;
+}
