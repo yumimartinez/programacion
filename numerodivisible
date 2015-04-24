@@ -1,0 +1,33 @@
+// numdivisible.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main(){
+	int a,b,mayor,menor;
+	cout << "Ingrese el primer numero: ";
+	cin >> a;
+	cout << "Ingrese el segundo numero: ";
+	cin >> b;
+	
+	if(a<b){
+		mayor=b;
+		menor=a;
+		}
+		else 
+			mayor=a;
+			menor=b;
+
+		if(mayor%menor==0){
+			cout << "El numero es divisible" << endl;
+			}
+			else 
+			cout << "El numero NO es divisible" << endl;
+	
+	
+	getch ();
+	return 0;
+}
