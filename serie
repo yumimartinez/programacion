@@ -1,0 +1,28 @@
+// numdivisible.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main(){
+	int x,n,s,sig,p,i;
+	s=0;
+	sig=1;
+	cout << "Ingrese el numero: ";
+	cin >> x;
+	cout << "Ingrese el numero de veces que la serie debe sumar: ";
+	cin >> n;
+
+	for(i=1; i<=n; i++){
+		p=powf(x,i);
+		s=s+(sig)*p;
+		sig=sig*(-1);
+
+		cout << "La suma es: " << s << endl;
+	}
+	
+	getch ();
+	return 0;
+}
