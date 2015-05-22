@@ -1,0 +1,48 @@
+// mcd.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float mcd(float a, float b);
+
+void main()
+{
+	float a,b,t;
+	cout << "Ingrese el primer numero: ";
+	cin >> a;
+	cout << "Ingrese el segundo numero: ";
+	cin >> b;
+	t=mcd(a,b);
+	cout << "EL MCD es: "<< t;
+	getch();
+
+}
+float mcd(float a,float b)
+{
+	int x,y,c=2,t=1;
+	if(a<b)
+	{
+		x=a;
+		y=b;
+	}
+	else 
+	{
+		x=b;
+		y=a;
+	}
+
+	do{
+		if((x%c==0)&&(y%c==0)){
+			t=t*c;
+			x=x/c;
+			y=y/c;
+		}
+		else
+		{c++;}
+	}while (c<=x);
+	return t;
+}
