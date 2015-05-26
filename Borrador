@@ -1,0 +1,104 @@
+// Parkingsearch1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+void publico ();
+void plaza (float opcion1);
+void detalles (float opcion3);
+void privado ();
+
+int main()
+{
+	int opcion,opcion1,opcion2,opcion3,opcion4,opcion5,opcion6,opcion7;
+	do{
+		cout <<endl;
+		cout << "    PARKING SEARCH" << endl;
+		cout << " ----------------------- " << endl;
+		cout << "  1. Parqueo publico" << endl;
+		cout << "  2. Parqueo privado" << endl;
+		cout << "  0. Salir" << endl;
+		cout << endl;
+		cout << "  ELIGE UNA OPCION: ";
+		cin >> opcion;
+		system ("cls");
+
+	switch(opcion){
+		case 1: publico();break;
+		case 2: privado ();break;
+		case 0: cout << "Salir"; break;
+		default: cout << "Opcion invalida";
+		}
+	switch (opcion1){
+		case 1: plaza (opcion1); break;
+	}
+	switch (opcion3){
+		case 1: detalles(opcion3);break;
+	}
+	}while (opcion!=0);
+	getch();
+}
+
+void publico ()
+{
+		float opcion1;
+			cout << "	" << "PARQUEO PUBLICO"<< endl;
+			cout << endl;
+			cout << " 1. Zona de la plaza principal" << endl;
+			cout << " 2. Zona 7 Calles" << endl;
+			cout << " 3. Zona del Parque El Arenal" << endl;
+			cout << " 0. Salir" << endl;
+			cout << " ELIGE OPCION: " << endl;
+			cin >> opcion1;
+			system ("cls");
+			plaza(opcion1);
+}
+void plaza(float opcion1)
+{
+	float opcion3;
+			cout << "ZONA DE LA PLAZA PRINCIPAL"<< endl;
+			cout << endl;
+			cout << " 1. Parqueo A" << endl;
+			cout << " 2. Parqueo B" << endl;
+			cout << " 3. Parqueo C" << endl;
+			cout << " 4. Parqueo D" << endl;
+			cout << " 5. Parqueo E" << endl;
+			cout << " 6. Parqueo F" << endl;
+			cout << " 0. Salir" << endl;
+			cout << " ELIGE UNA OPCION: ";
+			cin >> opcion3;
+			system ("cls");
+			detalles (opcion3);
+}
+void detalles (float opcion3)
+{
+		cout << "PARQUEO A: ZONA DE LA PLAZA PRINCIPAL" << endl;
+		cout << endl;
+		cout << " Horarios de atencion: " << endl;
+		cout << " Lunes a Viernes: 8:00am-21:00pm "<< endl;
+		cout << endl;
+		cout << " Direccion: " << endl;
+		cout << " Calle velasco entre Ingavi y Ayacucho. " << endl;
+		cout << endl;
+		cout << " Precio: " << endl;
+		cout << " 15Bs. No se cobra por horas extras. " << endl;
+}
+
+void privado ()
+{
+	float opcion2;
+			cout << "PARQUEO PRIVADO" << endl;
+			cout << endl;
+			cout << "1. Zona de la Plaza Principal" << endl;
+			cout << "2. Zona 7 calles" << endl;
+			cout << "0. Salir" << endl;
+			cout << "ELIGE UNA OPCION: ";
+			cin >> opcion2;
+			system ("cls");
+}
+
+
