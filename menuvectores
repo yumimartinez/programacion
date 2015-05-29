@@ -16,6 +16,7 @@ void mostrar(int vec[],int tam);
 void main()
 {
 int n, vec[MAX],opcion;
+system ("color 6E");
 	do{ 
 		cout<< "Ingrese el numero de elementos del vector: ";
 		cin>> n;
