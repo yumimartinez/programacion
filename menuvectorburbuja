@@ -1,0 +1,93 @@
+// 14 del practico vectores.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar(int vec[],int tam);
+void ordenara(int vec[],int tam);
+void ordenard(int vec[],int tam);
+void mostrar(int vec[],int tam);
+
+void main()
+{
+int n, vec[MAX],opcion;
+	do{ 
+		cout<< "Ingrese el numero de elementos del vector: ";
+		cin>> n;
+	}while((n<=0)||(n>100));
+	
+	do{
+		cout<< "1. Vector Ascendente"<< endl;
+		cout<< "2. Vector Descendente"<< endl;
+		cout<< "0. Salir"<< endl;
+		cout<< "ELIGE UNA OPCION: "<< endl;
+		cin >> opcion;
+
+		switch(opcion){
+		case 1:	cargar(vec,n);
+				ordenara(vec,n);
+				mostrar(vec,n);break;
+
+		case 2: cargar(vec,n);
+				ordenard(vec,n);
+				mostrar(vec,n); break;
+		case 0: cout<< "Salir";break;
+		default: cout<< "Opcion invalida";break;		
+		}
+	}while(opcion!=0);
+getch();
+system("cls");
+}
+
+void cargar(int vec[],int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+	cout<< "Ingrese el valor para vec["<< i << "]=";
+	cin>> vec[i];
+	}
+}
+void ordenara(int vec[],int tam)
+{
+	int aux,m;
+	for (int i=0;i<tam-1;i++)
+	{
+		for(int j=i+1;j<tam;j++)
+		{
+			if(vec[i]>vec[j])
+			{
+			aux=vec[j];
+			vec[j]=vec[i];
+			vec[i]=aux;
+			}
+		}
+	}	
+}
+void ordenard(int vec[],int tam)
+{
+	int aux,m;
+	for (int i=0;i<tam-1;i++)
+	{
+		for(int j=i+1;j<tam;j++)
+		{
+			if(vec[i]<vec[j])
+			{
+			aux=vec[j];
+			vec[j]=vec[i];
+			vec[i]=aux;
+			}
+		}
+	}	
+}
+void mostrar(int vec[],int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+	cout<< "vec["<< i << "]=";
+	cout<< vec[i]<<endl;
+	}
+}
