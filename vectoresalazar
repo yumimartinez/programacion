@@ -1,0 +1,32 @@
+// vectores.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include <time.h>
+
+void mostrar (int b[], int tamanio);
+
+using namespace std;
+int main()
+{
+	int tamanio=5;
+	int a[5];
+	srand (time(0));
+	for (int i=0; i<tamanio; i++)
+		a[i]= 1+rand()%30;
+	mostrar (a,tamanio);
+	system ("PAUSE");
+	return 0;
+
+}
+
+void mostrar (int b[],int tamanio)
+{
+	for (int i=0; i<tamanio; i++)
+		cout << b[i]<< " ";
+	cout << "son lugares disponibles."<< endl;
+}
+	
